@@ -1,0 +1,6 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<div class="banner">
+		<h1>LiMaRA DA ~ Welcome! Library Material Reservation Application</h1>
+		<img class="banner-img" src ="assets/book-icon.png" alt="book-vector-icon" height="64" width="64" />
+	</div>
+</jsp:root>

@@ -1,0 +1,12 @@
+.bold {
+	font-weight: bold;
+}
+
+.no-border {
+	border: none;
+}
+
+.center {
+	display: block;
+	margin: 16px auto;
+}

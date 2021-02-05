@@ -1,0 +1,25 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
+	<!-- Author: Daniel Guo -->
+	<div class="menu-title-container">
+		<p class="menu-title-item">Account Owner: ${sessionScope.owner.getFirstName()} ${sessionScope.owner.getLastName()}</p>
+		<p class="menu-title-item">Number of Materials Reserved: <c:out value="${noMat}" /></p>
+	</div>
+	<div class="menu-container">
+		<form class="menu-item" action="reservematerials.jspx">
+			<div>
+				<input type="submit" name="reserve" value="Reserve Materials" />
+			</div>
+		</form>
+		<form class="menu-item" action="showmaterialreservations.jspx">
+			<div>
+				<input type="submit" name="show" value="Show Reservations" />
+			</div>
+		</form>
+		<form class="menu-item" action="logout.jspx">
+			<div>
+				<input type="submit" name="logout" value="Logout" />
+			</div>
+		</form>
+	</div>	
+	<hr />
+</jsp:root>

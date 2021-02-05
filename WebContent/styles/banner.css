@@ -1,0 +1,12 @@
+.banner {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 8px;
+	background-color: lightblue;
+	margin: 4px 0;
+}
+
+.banner-img {
+	border-radius: 12px;
+}

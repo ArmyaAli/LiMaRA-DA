@@ -1,0 +1,89 @@
+/* dont want content hiding at the edges */
+/* this css class should always be included in a page first so styles can be overrided in the page specific stylesheet */
+* {
+	margin: 0;
+}
+
+html {
+	padding: 4px;
+}
+
+ul {
+	list-style: none;
+}
+
+
+h1 {
+	margin: auto 0;
+}
+
+hr {
+	/* custom styles */
+	border: none;
+	border-radius: 12px;
+	background-color: black;
+	height: 4px;
+	margin: 4px;
+}
+
+
+.error-msg {
+	width: 100%;
+	height: 32px;
+	font-size: 32px;
+	color: red;
+	text-align: center;
+	margin-top: 16px;
+	margin-bottom: 16px; 
+}
+
+.menu-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.menu-item {
+	margin: 4px 4px;
+}
+
+.menu-title-container {
+	margin: 4px;
+}
+
+.menu-title-item {
+	font-size: 24px;
+	margin: 4px 4px;
+}
+
+.entry-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	/* this was calculated using top margin - bot margin with the size of the contained item in pixels considered && the height of the parent  */
+	margin: 16px 0;
+}
+
+.item-container {
+	border: solid 1px black;
+	height: 64px;
+	width: 90%;
+	padding: 8px;
+	margin: 4px auto;
+}
+
+.item {
+	width: 256px;
+	font-size: 16px;
+	height: 32px;
+	line-height: 32px;
+	text-align: left;
+	/* background-color: lightgrey; */
+}
+
+.post-button {
+	height: 32px;
+	width: 50%;
+}
+
+

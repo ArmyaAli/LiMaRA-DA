@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author: Ali Umar -->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
+	<jsp:directive.page language="java"
+		contentType="application/xhtml+xml; charset=UTF-8"
+		pageEncoding="UTF-8" />
+	<jsp:output omit-xml-declaration="no" doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.1//EN"
+		doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
+	<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Reservation list</title>
+<link rel="stylesheet" type="text/css" href="styles/common.css" />
+<link rel="stylesheet" type="text/css" href="styles/utility.css" />
+<link rel="stylesheet" type="text/css" href="styles/banner.css" />
+</head>
+<body>
+	<jsp:include page="banner.jspx" />
+	<jsp:include page="limaramenu.jspx" />
+	<c:if test="${empty mList or mList eq null}">
+		<p class="error-msg">Account Owner: <c:out value = "${sessionScope.owner.getFirstName()}"/>&#160;<c:out value = "${sessionScope.owner.getLastName()}"/> , has no library
+			material reservations at this moment!</p>
+	</c:if>
+	<!-- tabular list like structure u cannot have FORM tags inside a table -->
+	<ul>
+		<c:forEach var="material" items="${mList}">
+			<li class="item-container">
+				<form action="showmaterialreservations.jspx" method="post">
+					<div class="entry-container">
+						<span class="item ititle">${material.title}</span> <span
+							class="item">${material.type}</span> <input class="post-button"
+							name="cancel" value="Cancel Reservation" type="submit" /> <input
+							type="hidden" name="idINPUT" value="${material.id}" />
+					</div>
+				</form>
+			</li>
+		</c:forEach>
+	</ul>
+</body>
+	</html>
+</jsp:root>
